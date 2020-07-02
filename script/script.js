@@ -51,12 +51,29 @@ window.addEventListener('DOMContentLoaded',function(){
    appDateClock()
   }
   //setInterval(countTimer, 1000, '4,july , 2020')
-  countTimer('02, july, 2020')
+  countTimer('03, july, 2020')
 
 
+const toggleMenu = ()=>{
 
+  const btnMenu = document.querySelector('.menu'),
+  menu = document.querySelector('menu'),
+  closebtn = document.querySelector('.close-btn');
 
+  btnMenu.addEventListener('click',() =>{
+    if(!menu.style.transform || menu.style.transform === `translate(-100%)`) {
+    menu.style.transform = `translate(0)`
+    }else{
+      menu.style.transform = `translate(-100%)`;
+    }
+    
+    });
+    closebtn.addEventListener('click',()=>{
+      menu.style.transform = `translate(-100%)`;
+    })
+  }
 
+  toggleMenu();
 
 
 })
